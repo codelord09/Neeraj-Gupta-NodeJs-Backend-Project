@@ -100,21 +100,24 @@ Go to http://localhost:3000 to view the app running on your browser.
 | **User Management**                         |        |                                              |
 | `/users/register`                           | POST   | User sign-up                                 |
 | `/users/update/password`                    | PUT    | Update user password                        |
-| `/users/getuser`                            | GET    | Get user details                             |
-| `/users/username`                           | DELETE | Delete user by username                      |
+| `/users/:username`                            | GET    | Get user details                             |
+| `/users`                           | GET | Get all user details                       |
+| `/users/:username`                           | DELETE | Delete user by username                      |
 |                                             |        |                                              |
 | **Post Related APIs**                       |        |                                              |
 | `/posts/createNewPost`                      | POST   | Create new posts                             |
-| `/posts/update/update-post-by-postid`      | PUT    | Update post by postid                       |
-| `/posts/postid`                             | GET    | Get post by postid                           |
-| `/posts/invalid-postid`                     | DELETE | Delete post by postid                        |
+| `/posts/update/:postId`      | PUT    | Update post by postId                       |
+| `/posts/:postId`                             | GET    | Get post by postId                           |
+| `/posts/user/:userId`                     | GET | Get all post made by user using userId                        |
+| `/posts/:postId`                     | DELETE | Delete post by postId                        |
 |                                             |        |                                              |
 | **Comment Related APIs**                    |        |                                              |
-| `/comments/user/userID/post/postID`         | POST   | Comment on post by user                      |
-| `/comments/update/user/userID/post/postID` | PUT    | Update comment on post by user               |
-| `/comments/commentID`                       | GET    | Retrieve comment by commentID               |
-| `/comments/user/user-id`                    | GET    | Retrieve all comments by user                |
-| `/comments/commentID`                       | DELETE | Delete comment by commented                 |
-| `/comments/post/postID`                     | GET    | Retrieve all comments on the post by postID  |
+| `/comments/user/:userId/post/:postId`         | POST   | Comment on post by user                      |
+| `/comments/update/user/:userId/post/:postId` | PUT    | Update comment on post by user               |
+| `/comments/:commentId`                       | GET    | Retrieve comment by commentID               |
+| `/comments/user/:userId`                    | GET    | Retrieve all comments by user using userId             |
+| `/comments`                       | GET | Get all comments                 |
+| `/comments/:commentId`                       | DELETE | Delete comment by commentID                 |
+| `/comments/post/postId`                     | GET    | Retrieve all comments on the post by postID  |
 
 
